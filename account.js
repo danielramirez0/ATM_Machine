@@ -1,6 +1,8 @@
+const { balance } = require("./wallet.js");
+
 const account1 = {
   accountNumber: 123456,
-  accountBalance: require("./wallet.js").balance,
+  accountBalance: balance,
   accountPin: 1234,
 };
 console.log(account1);

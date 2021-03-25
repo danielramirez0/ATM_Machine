@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/danrezz/ATMProject/issues"
   },
-  "homepage": "https://github.com/danrezz/ATMProject#readme"
+  "homepage": "https://github.com/danrezz/ATMProject#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
