@@ -1,10 +1,17 @@
-const getBalance = function (params) {};
+const account = require("./account.js");
+const wallet = require("./wallet.js");
 
-const withdraw = function (params) {};
+const getBalance = function (source) {
+  return source.acctBal;
+};
 
-const deposit = function (params) {};
+const withdraw = function (source, amt) {
+  return source - amt;
+};
 
-const validatePin = function (params) {};
+const deposit = function (source, amt) {};
+
+const validatePin = function (input) {};
 
 module.exports = {
   getBalance: getBalance,

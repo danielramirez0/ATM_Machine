@@ -1,7 +1,10 @@
-const accoutNumber = 123456;
-let accountBalance = 0.0;
-let accountPin = 1234;
+const account1 = {
+  accountNumber: 123456,
+  accountBalance: require("./wallet.js").balance,
+  accountPin: 1234,
+};
+console.log(account1);
 
-module.exports.acctNum = accoutNumber;
-module.exports.acctBal = accountBalance;
-module.exports.acctPin = accountPin;
+module.exports.acctNum = account1.accountNumber;
+module.exports.acctBal = account1.accountBalance;
+module.exports.acctPin = account1.accountPin;
