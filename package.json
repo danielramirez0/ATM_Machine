@@ -1,0 +1,21 @@
+{
+  "name": "ATMProject",
+  "version": "1.0.0",
+  "description": "devCodeCamp Week 3 Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danrezz/ATMProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danrezz/ATMProject/issues"
+  },
+  "homepage": "https://github.com/danrezz/ATMProject#readme"
+}
