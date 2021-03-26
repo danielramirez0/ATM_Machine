@@ -1,3 +1,2 @@
-const wallet = require("./atm").wallet;
-console.log(wallet);
-module.exports.balance = wallet;
+let cash = 100;
+module.exports.cash = cash;

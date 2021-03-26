@@ -2,7 +2,7 @@
 
 const account1 = {
   accountNumber: 123456,
-  accountBalance: 100,
+  accountBalance: 1000,
   accountPin: 1234,
 };
 

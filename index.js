@@ -4,12 +4,13 @@ const { getBalance: checkMoney } = require("./atm");
 const { withdraw: takeMoneyOutDaBank } = require("./atm");
 const { deposit: putMoneyInDaBank } = require("./atm");
 const { validatePin: checkPin } = require("./atm");
+const { getWalletBalance: checkWallet } = require("./atm");
 const accountInfo = require("./account.js");
 const helloMessage = `___/<^>\\___ SUPER RAD BANK ___/<^>\\___\nAttemping to access account# ${accountInfo.acctNum}`;
 const goodbyeMessage = "Thank you for using our services!\n___/<^>\\___ SUPER RAD BANK ___/<^>\\___";
 const invalidMessage = ":::::ALERT:::::\nYOUR ENTRY IS NOT VALID\nPLEASE, RETRY OR TYPE QUIT TO EXIT";
 const atmMainMenu =
-  "\n\n========= ATM MAIN MENU ==========\n---Choose your desired action---\n1: Check available balance.\n2: Make a deposit.\n3: Withdraw funds.\n4: Change account pin.\n5: Exit ATM Session\n\n";
+  "\n\n========= ATM MAIN MENU ==========\n---Choose your desired action---\n1: Check available balance.\n2: Make a deposit.\n3: Withdraw funds.\n4: Check my wallet.\n5: Exit ATM Session\n\n";
 
 function app(data) {
   //   console.log("___/<^>\\___ SUPER RAD BANK ___/<^>\\___");
@@ -46,7 +47,7 @@ function ATM(data) {
       checkMoney(data.acctBal);
       break;
     case 4:
-      changePin();
+      checkWallet();
       break;
     case 5:
       console.log(goodbyeMessage);
