@@ -1,8 +1,8 @@
 "use strict";
 const prompt = require("prompt-sync")();
-const { getBalance: checkMoney, deposit } = require("./atm");
-const { withdraw: getMoney } = require("./atm");
-const { deposit: putMoney } = require("./atm");
+const { getBalance: checkMoney } = require("./atm");
+const { withdraw: takeMoneyOutDaBank } = require("./atm");
+const { deposit: putMoneyInDaBank } = require("./atm");
 const { validatePin: checkPin } = require("./atm");
 const accountInfo = require("./account.js");
 const helloMessage = `___/<^>\\___ SUPER RAD BANK ___/<^>\\___\nAttemping to access account# ${accountInfo.acctNum}`;
@@ -38,11 +38,11 @@ function ATM(data) {
       checkMoney(data.acctBal);
       break;
     case 2:
-      data.acctBal = putMoney(data.acctBal);
+      data.acctBal = putMoneyInDaBank(data.acctBal);
       checkMoney(data.acctBal);
       break;
     case 3:
-      data.acctBal = getMoney(data.acctBal);
+      data.acctBal = takeMoneyOutDaBank(data.acctBal);
       checkMoney(data.acctBal);
       break;
     case 4:
