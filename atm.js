@@ -1,5 +1,10 @@
 // const account = require("./account.js");
 const prompt = require("prompt-sync")();
+const wallet = {
+  balance: 0,
+};
+const invalidMessage = ":::::ALERT:::::\nYOUR ENTRY IS NOT VALID\nPLEASE, RETRY OR TYPE QUIT TO EXIT";
+
 const getBalance = function (source) {
   console.log("\n\nHere is your available account balance\n\n" + source);
 };
@@ -7,7 +12,7 @@ const getBalance = function (source) {
 const withdraw = function (source) {
   let withdrawal = parseFloat(prompt("Enter the amount you would like to take out:"));
   if (isNaN(withdrawal) || withdrawal === "") {
-    console.log(":::::ALERT:::::\nINVALID ENTRY\nPLEASE, RETRY USING NUMBERS ONLY");
+    console.log(invalidMessage);
     withdraw();
   } else {
     return source - withdrawal;
@@ -17,7 +22,7 @@ const withdraw = function (source) {
 const deposit = function (source) {
   let deposit = parseFloat(prompt("Enter the amount you would like to deposit:"));
   if (isNaN(deposit) || deposit === "") {
-    console.log(":::::ALERT:::::\nINVALID ENTRY\nPLEASE, RETRY USING NUMBERS ONLY");
+    console.log(invalidMessage);
     deposit();
   } else {
     return source + deposit;
@@ -37,4 +42,5 @@ module.exports = {
   withdraw: withdraw,
   deposit: deposit,
   validatePin: validatePin,
+  wallet: wallet,
 };

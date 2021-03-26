@@ -1,5 +1,3 @@
-const wallet = {
-  startingBalance: 100.0,
-};
-
-module.exports.balance = wallet.startingBalance;
+const wallet = require("./atm").wallet;
+console.log(wallet);
+module.exports.balance = wallet;

@@ -1,8 +1,8 @@
-const { balance } = require("./wallet.js");
+// const { balance } = require("./wallet.js");
 
 const account1 = {
   accountNumber: 123456,
-  accountBalance: balance,
+  accountBalance: 100,
   accountPin: 1234,
 };
 
